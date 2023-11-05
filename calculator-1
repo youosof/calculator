@@ -1,1 +1,30 @@
-calculator is console version 1
+print("welcome to calculator")
+print()
+print("1. Sum (+)")
+print("2. Substract (-)")
+print("3. Multiply (*)")
+print("4. Divide (/)")
+print()
+
+opt = input ("Please select an option: ")
+
+num1=int(input("please enter first number "))
+num2=int(input("please enter second number "))
+
+if opt == "1" or opt == "+":
+	result = num1 + num2
+	print ("{0} + {1} = {2}".format(num1,num2,result))
+elif opt == "2" or opt == "-":
+	result = num1 - num2
+	print ("{0} - {1} = {2}".format(num1,num2,result))
+elif opt == "3" or opt == "*":
+	result = num1 * num2
+	print ("{0} * {1} = {2}".format(num1,num2,result))
+elif opt == "4" or opt == "/":
+	if num2==0:
+		print("Divison by zero error!")
+	else:
+		result = num1 / num2
+		print ("{0} / {1} = {2}".format(num1,num2,result))
+else:
+	print ("Invalid operator!")
